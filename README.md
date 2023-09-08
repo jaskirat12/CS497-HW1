@@ -25,4 +25,11 @@ This algorithm has O(n2) complexity because it has an algorithm of O(n) complexi
         Return the output array.
       Else the target was not found in the array
         Return the error output array [-1, -1]
+4. Initialize Node prev and cur and int count = 0
+   Traverse the list starting from the head, incrementing count (Complexity O(n))
+   Subtract n from the count
+   Traverse the list count times, storing the previous node in prev. (Complexity O(1 to n)
+   Assign the next pointer of prev to the next node after current
+   Current node is now dereferenced and will be garbage collected
+This algorithm has O(2n) complexity in the worst case, where the input n is 0, and O(n) complexity in the best case, where the input n equals the length of the list.
 
